@@ -5,9 +5,10 @@ import styled from 'styled-components';
 
 import { Link } from 'react-router-dom';
 
-import history from '../Globals/history' 
+import history from '../js/history' 
 
 import * as s from '../component-styles/component-styles.js';
+import * as b from 'react-bootstrap'
 
 class SearchBar extends React.Component {
   constructor(props) {
@@ -30,10 +31,10 @@ class SearchBar extends React.Component {
 
   render() {
     return (
-      <form className="navbar-form navbar-left" role="search" onSubmit={ this.searchGiph }>
+      <b.Navbar.Form className="navbar-form navbar-left form-group" role="search" onSubmit={ this.searchGiph }>
           <label for="search">Search:</label>
           <input type="text" onChange={ this.setSearchValue }/>
-      </form>
+      </b.Navbar.Form>
     );
   };
 };
@@ -77,14 +78,16 @@ export default class Layout extends React.Component {
   render() {
     return (
       <div>
-        <h1>GiphFind</h1>
-        <div id="AppHeader">
-            <Link to="/favorites"><s.Button>favorites</s.Button></Link>
-            <div id="SearchHeader">
+        <b.Jumbotron>
+          <img src="../Resources/GiphFind.png" className="img-responsive center-block"/>
+        </b.Jumbotron>
+        <b.Navbar id="AppHeader" className="center-block">
+            <div id="SearchHeader" className="center-block">
               <SearchBar id="SearchBar" searchGiph={ this.searchGiph } setSearchValue={ this.setSearchValue}/>
               <SearchButton id="SearchButton" searchGiph={ this.searchGiph }/>
+              <Link to="/favorites"><s.Button>favorites</s.Button></Link>
             </div>
-        </div>
+        </b.Navbar>
         {this.props.children}
       </div>
     );

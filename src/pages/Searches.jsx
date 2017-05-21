@@ -2,11 +2,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Route } from 'react-router-dom';
-import history from '../Globals/history' 
+import history from '../js/history' 
 
 import * as s from '../component-styles/component-styles.js';
 
-import * as giphyAPI from '../Globals/GiphyApi.js';
+import * as giphyAPI from '../js/GiphyApi.js';
 
 // Necessary evil
 //import jQuery from "jquery";

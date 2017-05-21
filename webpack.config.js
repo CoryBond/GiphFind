@@ -5,7 +5,7 @@ var BUILD_DIR = path.resolve(__dirname, 'src/build');
 var APP_DIR = path.resolve(__dirname, 'src');
 
 var config = {
-  entry: APP_DIR + '/main/main.jsx',
+  entry: [ APP_DIR + '/main/main.jsx' ],
   output: {
     path: BUILD_DIR,
     publicPath: '/build',
@@ -17,7 +17,28 @@ var config = {
         test : /\.jsx?/,
         include : APP_DIR,
         loader : 'babel-loader'
-      }
+      },
+      { 
+        test: /\.css$/, 
+        loader: "style-loader!css-loader" 
+      },
+      { 
+        test: /\.png$/, 
+        loader: "url-loader?limit=100000" 
+      },
+      { 
+        test: /\.jpg$/, 
+        loader: "file-loader" 
+      },
+      { 
+        test: /\.png$/, 
+        loader: "file-loader" 
+      },
+      { test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: "file-loader" },
+      { test: /\.(woff|woff2)$/, loader:"url-loader?prefix=font/&limit=5000" },
+      { test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: "url-loader?limit=10000&mimetype=application/octet-stream" },
+      { test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: "url-loader?limit=10000&mimetype=image/svg+xml" },
+      { test: /\.json$/, loader: 'json-loader'},
     ]
   },
   devServer: {

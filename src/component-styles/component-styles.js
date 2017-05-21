@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+//import {Navbar, Nav, NavItem, DropdownButton, MenuItem, Button} from 'react-bootstrap'
+
 
 export const Center = styled.div`
     margin: 0;
@@ -41,6 +43,7 @@ export const Gif = styled.img`
 `;
 
 export const MetaData = styled.div`
+    margin: 0 auto;
     background: grey;
     float: left;
     width: 100%;

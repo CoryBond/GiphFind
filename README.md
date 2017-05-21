@@ -48,3 +48,22 @@ Test Instructions:
 
     Mobile testing was done simply by resizing the browser window. Theres probably a lot better ways 
     of doing mobile testing but that is what I used when I developed this project.
+
+
+
+
+
+
+
+
+//
+     "css-loader": "~0.28.1",
+     "extract-text-webpack-plugin": "~2.1.0",
+     "node-sass": "~4.5.3",
+     "resolve-url-loader": "~2.0.2",
+     "sass-loader": "~6.0.5",
+     "file-loader": "~0.11.1",
+     "url-loader": "~0.5.8",
+     "bootstrap-loader": "~2.1.0",
+     "bootstrap-sass": "~3.3.7",
+     "jquery" : "3.2.1",

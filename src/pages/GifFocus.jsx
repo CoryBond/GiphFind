@@ -5,11 +5,11 @@ import { Link } from 'react-router-dom';
 
 import * as s from '../component-styles/component-styles.js';
 
-import history from '../Globals/history' 
+import history from '../js/history' 
 
 //import FavoritesKey from '../Globals/favoritesKey.js';
 
-import * as giphyAPI from '../Globals/GiphyApi.js';
+import * as giphyAPI from '../js/GiphyApi.js';
 
 class FavoriteThisGifButton extends React.Component {
 

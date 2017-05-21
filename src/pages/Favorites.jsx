@@ -2,7 +2,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import history from '../Globals/history' 
+import history from '../js/history' 
 
 import * as s from '../component-styles/component-styles.js';
 

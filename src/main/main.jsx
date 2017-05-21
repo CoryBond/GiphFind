@@ -4,14 +4,26 @@ import ReactDOM from 'react-dom';
 import styled from 'styled-components';
 import ReactRouter from 'react-router';
 import { Router, Switch, Route } from 'react-router-dom';
-import history from '../Globals/history' 
+import history from '../js/history' 
 
 import Layout from '../pages/Layout.jsx';
 import Home from '../pages/Home.jsx';
 import Favorites from '../pages/Favorites.jsx';
 import Searches from '../pages/Searches.jsx';
 import GifFocus from '../pages/GifFocus.jsx';
+
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/css/bootstrap-theme.css';
+//import material from 'bootstrap-material-design';
 //import FavoritesKey from '../Globals/favoritesKey.js';
+
+
+//Starting the material javascript backend
+
+
+
+
+
 
 // Later on we may want to seperate out these two logical things in seperate files.
 
