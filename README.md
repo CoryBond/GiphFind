@@ -5,8 +5,7 @@ A project using React + React-Router + styled-components to make a simple single
 Its a application that allows you to search, favorite and shuffle gifs using the giphy api.
 
 This is a public project using the Giphy "Public Key" and is not meant for commercial usage.
-As this project is just for experimentation and for learning purposes there is no "live" 
-version of this application that I am aware of.
+This project is just for experimentation and for learning purposes.
 
 Dependencies:
 
@@ -43,27 +42,3 @@ Run Instructions:
     have to run the webpack server to get the project to work.
     Type in "npm start" to kick off the server and go to url "localhost:8080"
     to begin the project.
-
-Test Instructions:
-
-    Mobile testing was done simply by resizing the browser window. Theres probably a lot better ways 
-    of doing mobile testing but that is what I used when I developed this project.
-
-
-
-
-
-
-
-
-//
-     "css-loader": "~0.28.1",
-     "extract-text-webpack-plugin": "~2.1.0",
-     "node-sass": "~4.5.3",
-     "resolve-url-loader": "~2.0.2",
-     "sass-loader": "~6.0.5",
-     "file-loader": "~0.11.1",
-     "url-loader": "~0.5.8",
-     "bootstrap-loader": "~2.1.0",
-     "bootstrap-sass": "~3.3.7",
-     "jquery" : "3.2.1",

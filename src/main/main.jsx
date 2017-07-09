@@ -40,11 +40,11 @@ ReactDOM.render(
   <Router history={history}>
     <Layout>
       <Switch>
-          <Route exact path="/" component={Home}/>
-          <Route path="/favorites/:gifId" component={GifFocus}/>
-          <Route path="/favorites" component={Favorites}/>
-          <Route path="/searches/:search/:gifId" component={GifFocus}/>
-          <Route path="/searches/:search" component={Searches}>
+          <Route exact path="/GiphFind/" component={Home}/>
+          <Route path="/GiphFind/favorites/:gifId" component={GifFocus}/>
+          <Route path="/GiphFind/favorites" component={Favorites}/>
+          <Route path="/GiphFind/searches/:search/:gifId" component={GifFocus}/>
+          <Route path="/GiphFind/searches/:search" component={Searches}>
           </Route>
       </Switch>
     </Layout>

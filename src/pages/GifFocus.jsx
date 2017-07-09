@@ -57,7 +57,7 @@ class FavoriteThisGifButton extends React.Component {
   render() {
     return (
       <s.FavoriteTheGifButton favorited={this.state.favorited} onClick={ this.addOrDeleteGifAtFavorites }> 
-        Favorite This
+        Favorite This!
       </s.FavoriteTheGifButton>
     );
   };
@@ -94,7 +94,6 @@ export default class GifFocus extends React.Component {
   }
 
   componentWillReceiveProps(nextProps){
-    console.log("h");
       this.setState({
         currentGif: nextProps.location.state.currentGif
       });
@@ -109,7 +108,7 @@ export default class GifFocus extends React.Component {
     if(Array.isArray(searchResponseData)){
       var randomIndex = this.getRandomArbitrary(0, searchResponseData.length);
       var shuffledGif = searchResponseData[randomIndex];
-      history.push("/searches/" + this.search + "/" + shuffledGif.id, {currentGif: shuffledGif});
+      history.push("/GiphFind/searches/" + this.search + "/" + shuffledGif.id, {currentGif: shuffledGif});
     }
   }
 

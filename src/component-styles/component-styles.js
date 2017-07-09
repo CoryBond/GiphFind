@@ -10,7 +10,7 @@ export const Center = styled.div`
 export const GifGallery = styled.div`
     margin: 0;
     auto;
-    background: grey;
+    background: #E0F2F1;
     overflow: hidden;
 `;
 
@@ -22,7 +22,7 @@ export const GifPortrait= styled(GifGallery)`
 `;
 
 export const GifFrame = styled.div`
-    background: grey;
+    background: #E0F2F1;
     float: left;
     margin-top: 10px
     margin-bottom: 10px
@@ -33,7 +33,7 @@ export const GifFrame = styled.div`
 `;
 
 export const Gif = styled.img`
-    background: grey;
+    background: #E0F2F1;
     display: block;
     margin: 0 auto;
     width: 100%;
@@ -44,7 +44,7 @@ export const Gif = styled.img`
 
 export const MetaData = styled.div`
     margin: 0 auto;
-    background: grey;
+    background: #E0F2F1;
     float: left;
     width: 100%;
 `;
@@ -61,23 +61,23 @@ export const FullScreen = styled.div`
 `;
 
 export const Button = styled.button`
-    background: #FFD700;
+    background: #009688;
     border-radius: 8px;
     color: black;
 `;
 
 export const ShuffleButton = styled(Button)`
-    background: green;
+    background: #00695C;
 `;
 
 export const FavoriteTheGifButton = styled(Button)`
   /* Adapt the colors based on primary prop */
-  background: ${(props) => props.favorited ? 'palevioletred' : 'white'};
-  color: ${(props) => props.favorited ? 'white' : 'palevioletred'};
+  background: ${(props) => props.favorited ? '#00796B' : 'white'};
+  color: ${(props) => props.favorited ? 'white' : '#00796B'};
 
   font-size: 1em;
   margin: 1em;
   padding: 0.25em 1em;
-  border: 2px solid palevioletred;
+  border: 2px solid #00796B;
   border-radius: 3px;
 `;

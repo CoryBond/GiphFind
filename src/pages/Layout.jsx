@@ -32,7 +32,7 @@ class SearchBar extends React.Component {
   render() {
     return (
       <b.Navbar.Form className="navbar-form navbar-left form-group" role="search" onSubmit={ this.searchGiph }>
-          <label for="search">Search:</label>
+          <label htmlFor="/GiphFind/search">Search:</label>
           <input type="text" onChange={ this.setSearchValue }/>
       </b.Navbar.Form>
     );
@@ -63,9 +63,9 @@ export default class Layout extends React.Component {
       currentSearchValue: newCurrentSearchValue
     });
     if(newCurrentSearchValue){
-      history.push("/searches/" + newCurrentSearchValue);
+      history.push("/GiphFind/searches/" + newCurrentSearchValue);
     } else{
-      history.push("/");
+      history.push("/GiphFind/");
     }
   };
   
@@ -79,14 +79,14 @@ export default class Layout extends React.Component {
     return (
       <div>
         <b.Jumbotron>
-          <img src="../Resources/GiphFind.png" className="img-responsive center-block"/>
+          <img src="./src/Resources/GiphFind.png" className="img-responsive center-block"/>
         </b.Jumbotron>
         <b.Navbar id="AppHeader" className="center-block">
-            <div id="SearchHeader" className="center-block">
-              <SearchBar id="SearchBar" searchGiph={ this.searchGiph } setSearchValue={ this.setSearchValue}/>
-              <SearchButton id="SearchButton" searchGiph={ this.searchGiph }/>
-              <Link to="/favorites"><s.Button>favorites</s.Button></Link>
+            <div id="SearchHeader">
+              <SearchBar id="SearchBar" searchGiph={ this.searchGiph } setSearchValue={ this.setSearchValue} />
+              <Link to="/GiphFind/favorites" className="navbar-right"><s.Button>Favorites</s.Button></Link>
             </div>
+            <SearchButton id="SearchButton" className="navbar-left" searchGiph={ this.searchGiph }/>
         </b.Navbar>
         {this.props.children}
       </div>

@@ -53,7 +53,7 @@ export default class Searches extends React.Component {
   gifClicked(gif){
     const { params } = this.props.match;
     const { search } = params;
-    history.push("/searches/" + search + "/" + gif.id, {currentGif: gif});
+    history.push("/GiphFind/searches/" + search + "/" + gif.id, {currentGif: gif});
   }
 
   render() {

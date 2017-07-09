@@ -1,11 +1,11 @@
 var path    = require('path');
 var webpack = require('webpack');
 
-var BUILD_DIR = path.resolve(__dirname, 'src/build');
-var APP_DIR = path.resolve(__dirname, 'src');
+var BUILD_DIR = path.resolve(__dirname, 'build');
+var APP_DIR = path.resolve(__dirname, '');
 
 var config = {
-  entry: [ APP_DIR + '/main/main.jsx' ],
+  entry: [ APP_DIR + '/src/main/main.jsx' ],
   output: {
     path: BUILD_DIR,
     publicPath: '/build',
@@ -16,7 +16,8 @@ var config = {
       {
         test : /\.jsx?/,
         include : APP_DIR,
-        loader : 'babel-loader'
+        loader : 'babel-loader',
+        exclude: /node_modules/
       },
       { 
         test: /\.css$/, 
@@ -42,7 +43,7 @@ var config = {
     ]
   },
   devServer: {
-    contentBase: APP_DIR,
+    contentBase: APP_DIR + "/GiphFind/",
     inline: true,
     stats: 'errors-only'
   }

@@ -19,7 +19,7 @@ export default class Favorites extends React.Component {
   gifClicked(gif){
     const { params } = this.props.match;
     const { search } = params;
-    history.push("/favorites/" + gif.id, {currentGif: gif});
+    history.push("/GiphFind/favorites/" + gif.id, {currentGif: gif});
   }
 
   // Behaves very simularly to Searches. Maybe theres some why to consolidate their jsx logic.

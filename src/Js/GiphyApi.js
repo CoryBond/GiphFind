@@ -1,5 +1,5 @@
 
-const giphySearchEndpoint = "http://api.giphy.com/v1/gifs/search";
+const giphySearchEndpoint = "https://api.giphy.com/v1/gifs/search";
 const giphyPublicKey = "&api_key=dc6zaTOxFJmzC";
 const query = "?q=";
 
